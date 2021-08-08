@@ -1,0 +1,11 @@
+steps:
+  - id: deploy.cronjob
+    name: 'gcr.io/mkdevyoutube/helm'
+    env:
+      - 'CLOUDSDK_COMPUTE_REGION=europe-central2-a'
+      - 'CLOUDSDK_CONTAINER_CLUSTER=mkdev'
+      - 'GCLOUD_PROJECT=mkdevyoutube'
+    args:
+      - 'install'
+      - 'mkdevcronjob'
+      - 'mkdevcronjob/'
